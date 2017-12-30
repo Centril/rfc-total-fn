@@ -13,7 +13,7 @@ Allow functions to be defined as "total", which promises that the function will 
 
 In contexts such as high-uptime web services, industrial control systems or even [trains], it is business-critical or even safety-critical that software continues running, even in failure cases. While Rust goes much further than some other languages in encouraging the developer to handle gracefully errors with the likes of `Option`, `Result`, `try!` and a lack of exceptions, function calls are nonetheless somewhat opaque in their stability guarantees -- while `unwrap` and the like are immediately recognisable as dangerous, it is not possible in general to tell from a given function's signature or call site whether it might result in ending the thread in a panic.
 
-The industry-standard solution to this is testing, but as the aphorism goes, tests can only prove the presence of bugs, rather than their absence. The compiler, however, *can* prove the absence of bugs, and being able to prove the absence of unexpected aborts would be worthwhile in the safety-critical contexts Rust is targeting, being more exhaustive and reliable than any amount of testing.
+The industry-standard solution to this is testing, but as [the aphorism](https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF) goes, tests can only prove the presence of bugs, rather than their absence. The compiler, however, *can* prove the absence of bugs, and being able to prove the absence of unexpected aborts would be worthwhile in the safety-critical contexts Rust is targeting, being more exhaustive and reliable than any amount of testing.
 
 (TBC?)
 
